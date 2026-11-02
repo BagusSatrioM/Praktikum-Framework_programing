@@ -1,12 +1,20 @@
 import { Module } from '@nestjs/common';
-import { BooksModule } from './books/books.module.js';
-
-// AppModule = root module
-// imports = all feature modules registered di sini
-// Controllers = optional di root, biasanya di feature modules
-// Providers = sedikit (global config, logger)
+import { TypeOrmModule } from '@nestjs/typeorm';
+import * as entities from './bookstore/entities/index.js';
 
 @Module({
-  imports: [BooksModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '',
+      database: 'db_bookstore',
+      entities: Object.values(entities),
+      synchronize: true,
+      logging: true,
+    }),
+  ],
 })
 export class AppModule {}

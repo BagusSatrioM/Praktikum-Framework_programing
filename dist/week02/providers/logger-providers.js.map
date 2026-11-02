@@ -1,0 +1,1 @@
+{"version":3,"file":"logger-providers.js","sourceRoot":"","sources":["../../../src/week02/providers/logger-providers.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,kBAAkB,CAAC;AAE9C,MAAM,CAAC,MAAM,eAAe,GAAG;IAC7B;QACE,OAAO,EAAE,QAAQ;QACjB,QAAQ,EAAE,UAAU;KACrB;IACD;QACE,OAAO,EAAE,cAAc;QACvB,WAAW,EAAE,QAAQ;KACtB;CACF,CAAC"}

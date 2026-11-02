@@ -1,0 +1,48 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+import { Controller, Post, Body, Param } from '@nestjs/common';
+import { LelangService } from '../services/lelang.service.js';
+let LelangController = class LelangController {
+    lelangService;
+    constructor(lelangService) {
+        this.lelangService = lelangService;
+    }
+    tawar(produkId, pembeliId, jumlah) {
+        return this.lelangService.lelangProduk(produkId, pembeliId, jumlah);
+    }
+    selesaikan(produkId) {
+        return this.lelangService.selesaikanLelang(produkId);
+    }
+};
+__decorate([
+    Post(':produkId/tawar/:pembeliId'),
+    __param(0, Param('produkId')),
+    __param(1, Param('pembeliId')),
+    __param(2, Body('jumlah')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String, Number]),
+    __metadata("design:returntype", void 0)
+], LelangController.prototype, "tawar", null);
+__decorate([
+    Post(':produkId/selesaikan'),
+    __param(0, Param('produkId')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], LelangController.prototype, "selesaikan", null);
+LelangController = __decorate([
+    Controller('lelang'),
+    __metadata("design:paramtypes", [LelangService])
+], LelangController);
+export { LelangController };
+//# sourceMappingURL=lelang.controller.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"config-service.factory.js","sourceRoot":"","sources":["../../../src/week02/providers/config-service.factory.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,gBAAgB,EAAE,MAAM,qBAAqB,CAAC;AAEvD,MAAM,CAAC,MAAM,oBAAoB,GAAG;IAClC,OAAO,EAAE,gBAAgB;IACzB,UAAU,EAAE,GAAG,EAAE;QACf,OAAO,IAAI,gBAAgB,EAAE,CAAC;IAChC,CAAC;CACF,CAAC"}
